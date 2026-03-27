@@ -1,0 +1,14 @@
+import sys 
+
+capital = float(sys.argv[1])
+taxa_juros = float(sys.argv[2]) / 100
+
+montante = capital
+
+print("MONTANTE")
+print("==============")
+
+for i in range(1, 13):
+    deposito = float(input(f"Depósito do mês {i}: "))
+    montante = montante * (1 + taxa_juros)
+    print(f"{i}° mês: R${montante:.2f}")
